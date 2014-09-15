@@ -51,7 +51,9 @@ repositories {
 }
 
 // Project dependencies
-dependencies {}
+dependencies {
+    compile 'org.spongepowered:spongeapi:1.0.0-SNAPSHOT'
+}
 
 // Filter, process, and include resources
 processResources {

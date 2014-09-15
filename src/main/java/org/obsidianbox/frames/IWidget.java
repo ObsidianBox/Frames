@@ -29,13 +29,6 @@ import java.util.UUID;
 
 public interface IWidget {
     /**
-     * The type of widget this is. Required for proper synchronization between the server and client.
-     *
-     * @return the widget type.
-     */
-    WidgetType getType();
-
-    /**
      * Returns a unique id for this widget.
      *
      * @return the unique id.

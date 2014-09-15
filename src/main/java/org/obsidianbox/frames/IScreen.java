@@ -122,13 +122,6 @@ public interface IScreen extends IWidget {
     double getWidth();
 
     /**
-     * Gets the screen type of this screen.
-     *
-     * @return the {@link org.obsidianbox.frames.ScreenType}.
-     */
-    ScreenType getScreenType();
-
-    /**
      * Gets the x-coordinate of the mouse on this screen.
      *
      * @return the x-coordinate of the mouse.
