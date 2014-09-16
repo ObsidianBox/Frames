@@ -23,7 +23,7 @@
  */
 package org.obsidianbox.frames;
 
-public interface Texture extends IWidget {
+public interface ITexture extends IWidget {
     /**
      * Gets the url of this texture to render.
      *
@@ -38,7 +38,7 @@ public interface Texture extends IWidget {
      * @param url the url to set this texture to.
      * @return the texture.
      */
-    public Texture setUrl(String url);
+    public ITexture setUrl(String url);
 
     /**
      * Gets if the texture draws the full alpha channel instead of just using a bit-mask.
@@ -53,7 +53,7 @@ public interface Texture extends IWidget {
      * @param draw true to draw the alpha channel, false to not draw it.
      * @return the texture.
      */
-    public Texture setDrawAlphaChannel(boolean draw);
+    public ITexture setDrawAlphaChannel(boolean draw);
 
     /**
      * Set the offset to the top of the image.
@@ -63,7 +63,7 @@ public interface Texture extends IWidget {
      * @param top the top offset.
      * @return the texture.
      */
-    public Texture setTop(int top);
+    public ITexture setTop(int top);
 
     /**
      * Get the offset to the top of the image.
@@ -80,7 +80,7 @@ public interface Texture extends IWidget {
      * @param left the left offset.
      * @return the texture.
      */
-    public Texture setLeft(int left);
+    public ITexture setLeft(int left);
 
     /**
      * Get the offset to the left of the image.
@@ -90,7 +90,7 @@ public interface Texture extends IWidget {
     public int getLeft();
 
     /**
-     * @see Texture#setFinishDelegate(Runnable).
+     * @see ITexture#setFinishDelegate(Runnable).
      * @return the finish delegate.
      */
     public Runnable getFinishDelegate();
@@ -102,7 +102,7 @@ public interface Texture extends IWidget {
      * @param finishDelegate the delegate.
      * @return the texture.
      */
-    public Texture setFinishDelegate(Runnable finishDelegate);
+    public ITexture setFinishDelegate(Runnable finishDelegate);
 
     /**
      * Gets the actual width of the image.
