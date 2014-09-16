@@ -29,7 +29,7 @@ public interface ITexture extends IWidget {
      *
      * @return the url.
      */
-    public String getUrl();
+    String getUrl();
 
     /**
      * Sets the url of this texture to render. All textures must be of png type and a size that is a factor of 2
@@ -38,14 +38,14 @@ public interface ITexture extends IWidget {
      * @param url the url to set this texture to.
      * @return the texture.
      */
-    public ITexture setUrl(String url);
+    ITexture setUrl(String url);
 
     /**
      * Gets if the texture draws the full alpha channel instead of just using a bit-mask.
      *
      * @return true if drawing the alpha channel, false if not.
      */
-    public boolean isDrawingAlphaChannel();
+    boolean isDrawingAlphaChannel();
 
     /**
      * Sets if the texture should draw the full alpha channel instead of just using a bit-mask.
@@ -53,7 +53,7 @@ public interface ITexture extends IWidget {
      * @param draw true to draw the alpha channel, false to not draw it.
      * @return the texture.
      */
-    public ITexture setDrawAlphaChannel(boolean draw);
+    ITexture setDrawAlphaChannel(boolean draw);
 
     /**
      * Set the offset to the top of the image.
@@ -63,14 +63,14 @@ public interface ITexture extends IWidget {
      * @param top the top offset.
      * @return the texture.
      */
-    public ITexture setTop(int top);
+    ITexture setTop(int top);
 
     /**
      * Get the offset to the top of the image.
      *
      * @return the top offset.
      */
-    public int getTop();
+    int getTop();
 
     /**
      * Set the offset to the left of the image.
@@ -80,20 +80,20 @@ public interface ITexture extends IWidget {
      * @param left the left offset.
      * @return the texture.
      */
-    public ITexture setLeft(int left);
+    ITexture setLeft(int left);
 
     /**
      * Get the offset to the left of the image.
      *
      * @return the left offset.
      */
-    public int getLeft();
+    int getLeft();
 
     /**
      * @see ITexture#setFinishDelegate(Runnable).
      * @return the finish delegate.
      */
-    public Runnable getFinishDelegate();
+    Runnable getFinishDelegate();
 
     /**
      * Given delegates run() method will be called when the download of the image has been completed.
@@ -102,19 +102,19 @@ public interface ITexture extends IWidget {
      * @param finishDelegate the delegate.
      * @return the texture.
      */
-    public ITexture setFinishDelegate(Runnable finishDelegate);
+    ITexture setFinishDelegate(Runnable finishDelegate);
 
     /**
      * Gets the actual width of the image.
      *
      * @return the actual width of the image.
      */
-    public int getOriginalWidth();
+    int getOriginalWidth();
 
     /**
      * Gets the actual height of the image.
      *
      * @return the actual height of the image.
      */
-    public int getOriginalHeight();
+    int getOriginalHeight();
 }
