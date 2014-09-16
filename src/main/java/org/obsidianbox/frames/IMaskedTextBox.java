@@ -23,7 +23,7 @@
  */
 package org.obsidianbox.frames;
 
-public interface IMaskedField extends ITextField {
+public interface IMaskedTextBox extends ITextBox {
     /**
      * Gets the current character used to mask text input. Defaults to an asterisk (*).
      *
@@ -37,5 +37,5 @@ public interface IMaskedField extends ITextField {
      * @param character the mask character.
      * @return the masked field.
      */
-    IMaskedField setMaskCharacter(char character);
+    IMaskedTextBox setMaskCharacter(char character);
 }

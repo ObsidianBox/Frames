@@ -25,7 +25,7 @@ package org.obsidianbox.frames;
 
 import org.obsidianbox.frames.util.Color;
 
-public interface ITextField extends IControl {
+public interface ITextBox extends IControl {
     /**
      * Gets the position of the cursor in the text field. Position zero is the start of the text.
      *
@@ -39,7 +39,7 @@ public interface ITextField extends IControl {
      * @param position the position to set the cursor to.
      * @return the text field.
      */
-    ITextField setCursorPosition(int position);
+    ITextBox setCursorPosition(int position);
 
     /**
      * Gets the text typed in this text field.
@@ -54,7 +54,7 @@ public interface ITextField extends IControl {
      * @param text the text inside of the text field.
      * @return the text field.
      */
-    ITextField setText(String text);
+    ITextBox setText(String text);
 
     /**
      * Gets the maximum characters that can be typed into this text field.
@@ -70,7 +70,7 @@ public interface ITextField extends IControl {
      * @param max the maximum characters that can be typed.
      * @return the text field.
      */
-    ITextField setMaximumCharacters(int max);
+    ITextBox setMaximumCharacters(int max);
 
     /**
      * Gets the maximum line this text field can hold.
@@ -86,7 +86,7 @@ public interface ITextField extends IControl {
      * @param max the maximum lines (0 – 127).
      * @return the text field.
      */
-    ITextField setMaximumLines(int max);
+    ITextBox setMaximumLines(int max);
 
     /**
      * Gets the {@link org.obsidianbox.frames.util.Color} of the inner field area of the text box.
@@ -101,7 +101,7 @@ public interface ITextField extends IControl {
      * @param color the field {@link org.obsidianbox.frames.util.Color} to render as.
      * @return the text field.
      */
-    ITextField setFieldColor(Color color);
+    ITextBox setFieldColor(Color color);
 
     /**
      * Gets the outside {@link org.obsidianbox.frames.util.Color} of the field area of the text box.
@@ -116,7 +116,7 @@ public interface ITextField extends IControl {
      * @param color the border {@link org.obsidianbox.frames.util.Color} to render as.
      * @return the text field.
      */
-    ITextField setBorderColor(Color color);
+    ITextBox setBorderColor(Color color);
 
     /**
      * Gets the tab index for this text field.
@@ -135,7 +135,7 @@ public interface ITextField extends IControl {
      * @param index the tab index (0 – 127).
      * @return the text field.
      */
-    ITextField setTabIndex(int index);
+    ITextBox setTabIndex(int index);
 
     /**
      * Gets the text processor.
@@ -150,7 +150,7 @@ public interface ITextField extends IControl {
      * @param processor the text processor to assign.
      * @return the text field.
      */
-    ITextField setTextProcessor(ITextProcessor processor);
+    ITextBox setTextProcessor(ITextProcessor processor);
 
     /**
      * Fires when this text field is typed into on the screen. This event will also be sent to the screen listener.
@@ -168,7 +168,7 @@ public interface ITextField extends IControl {
      * @param text the placeholder text to set.
      * @return the text field.
      */
-    ITextField setPlaceholder(String text);
+    ITextBox setPlaceholder(String text);
 
     /**
      * Gets the placeholder text.
