@@ -1,11 +1,28 @@
+// Gradle plugins
+plugins {
+    id "com.github.hierynomus.license" version "0.11.0"
+	id "java"
+	id "maven"
+	id "signing"
+}
+
+// Project repositories
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        name = 'sonatype-nexus-public'
+        url = 'https://oss.sonatype.org/content/repositories/public/'
+    }
+}
+
+// Project dependencies
+dependencies {
+    //compile 'org.spongepowered:spongeapi:1.0.0-SNAPSHOT'
+}
+
 // Default tasks
 defaultTasks 'licenseFormat', 'build'
-
-// Apply plugins
-apply plugin: 'java'
-apply plugin: 'license'
-apply plugin: 'maven'
-apply plugin: 'signing'
 
 // Basic project information
 group = 'org.obsidianbox'
@@ -24,36 +41,6 @@ ext.organization = 'ObsidianBox'
 ext.buildNumber = project.hasProperty("buildNumber") ? buildNumber : '0'
 ext.ciSystem = project.hasProperty("ciSystem") ? ciSystem : 'unknown'
 ext.commit = project.hasProperty("commit") ? commit : 'unknown'
-
-// Gradle repositories and dependencies
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            name = 'sonatype-nexus-public'
-            url = 'https://oss.sonatype.org/content/repositories/public/'
-        }
-        jcenter()
-    }
-    dependencies {
-        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
-    }
-}
-
-// Project repositories
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven {
-        name = 'sonatype-nexus-public'
-        url = 'https://oss.sonatype.org/content/repositories/public/'
-    }
-}
-
-// Project dependencies
-dependencies {
-    compile 'org.spongepowered:spongeapi:1.0.0-SNAPSHOT'
-}
 
 // Filter, process, and include resources
 processResources {
@@ -77,7 +64,6 @@ tasks.withType(JavaCompile) {
     options.deprecation = true
     options.encoding = 'utf8'
 }
-
 
 // JAR manifest configuration
 jar.manifest.mainAttributes(
